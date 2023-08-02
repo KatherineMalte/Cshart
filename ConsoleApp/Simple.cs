@@ -35,15 +35,15 @@ namespace ConsoleApp
                         Console.WriteLine();
                         break;
 
-                    case 2:  
+                    case 2:
                         double radio = 0.0;
                         double area = 0.0, perimetro = 0.0;
-                        Console.WriteLine("Dígite el radio de un círculo"); 
+                        Console.WriteLine("Dígite el radio de un círculo");
                         radio = Double.Parse(Console.ReadLine());
-                      
+
                         perimetro = 2 * Math.PI * radio;
-                        area = Math.PI * Math.Pow(radio,2);
-                       
+                        area = Math.PI * Math.Pow(radio, 2);
+
                         Console.WriteLine("Su perímetro es: {0}. \nsu área es: {1}", perimetro, area);
                         Console.WriteLine();
                         break;
@@ -96,10 +96,10 @@ namespace ConsoleApp
                     case 5:
                         Console.WriteLine("Ingrese un número de tres cifras.");
 
-                        string linea= Console.ReadLine();
-                        int num =0, numinv=0, u=0, d=0, c=0, aux=0;
+                        string linea = Console.ReadLine();
+                        int num = 0, numinv = 0, u = 0, d = 0, c = 0, aux = 0;
                         num = int.Parse(linea);
-                        
+
                         aux = num;
                         c = num / 100;
                         num = num % 100;
@@ -116,7 +116,7 @@ namespace ConsoleApp
                         Console.WriteLine(" longitudes de cateto a");
                         string text = Console.ReadLine();
                         catetoA = int.Parse(text);
-                       
+
 
                         Console.WriteLine(" longitudes de cateto b");
                         string text2 = Console.ReadLine();
@@ -132,32 +132,89 @@ namespace ConsoleApp
                         break;
                     case 7:
 
-/*Hora actual: 11
-Cantidad de horas: 43
-En 43 horas, el reloj marcara las 6*/
-                        int horaAct = 0;
-                        int horaFut = 0;
-                        int horaFruturo = 0;
+                        /*Hora actual: 11
+                        Cantidad de horas: 43
+                        En 43 horas, el reloj marcara las 6*/
+                        int horaAct;
+                        int horaCant;
+                        int horaFruturo;
+                        int h = 0;
 
-                        Console.WriteLine("Hora actual");
-                        string hora = Console.ReadLine();
-                        horaAct = int.Parse(hora);
+                        if (h >= 0 && h <= 23)
+                        {
+                            Console.WriteLine("Hora actual");
+                            string hora = Console.ReadLine();
+                            horaAct = Convert.ToInt32(hora);
 
 
-                        Console.WriteLine("Cantidad de horas");
-                        string hora1 = Console.ReadLine();
-                        horaFut = int.Parse(hora1);
+                            Console.WriteLine("Cantidad de horas");
+                            string hora1 = Console.ReadLine();
+                            horaCant = Convert.ToInt32(hora1);
 
-                        horaFruturo = horaAct + horaFut;
+                            horaFruturo = horaAct + horaCant % 12;
 
-                        Console.WriteLine("En {0} horas, el reloj marcara las {1}",horaAct, horaFruturo);
+                            Console.WriteLine("En {0} horas, el reloj marcara las {1}", horaCant, horaFruturo);
+                            Console.WriteLine();
+                        }
                         break;
                     case 8:
-                        //Escriba un programa que entregue la parte decimal de un número real ingresado por el usuario.
-                        Console.WriteLine("Has elegido la opción 3");
-                        break;
+                        /*
+                        Double numeroDec = 0.0;
+                        Console.WriteLine("Ingrese un numero");
+                        String numero = Console.ReadLine();
+                        numeroDec = Convert.ToDouble(numero);
+                    
+                        Double parteEntera = Math.Truncate(numeroDec);
+                        Double parteDecimal = numeroDec - parteEntera;
+
+                        Console.WriteLine(parteEntera);
+                        Console.WriteLine(parteDecimal);
+                        Console.WriteLine();
+                        */
+
+                        Double numero = 4.5;
+                        Console.WriteLine($"Numero={numero}");
+                        Console.WriteLine($"Decimal={GetDecimalPart(numero)}");
+                
+
+                 static float GetDecimalPart(double numero)
+                {
+                    float decimalPart = 0;
+                    
+                    decimalPart = Math.Abs((int)(((decimal)numero - (int)numero) * 100));
+                    return decimalPart;
+                }
+                break;
                     case 9:
                         Console.WriteLine("Has elegido la opción 3");
+
+                        double[] calif1 = new double[3];
+                        double promedio1 = 0.0;
+                        double sumatoria1 = 0.0;
+                        String dato1 = "";
+                        double notafinal = 0.0;
+                        double notaLab = 0.0;
+                        int n1 = 0;
+
+                        for (n1 = 0; n1 < 3; n1++)
+                        {
+                            Console.WriteLine("Dame la calificación");
+                            dato1 = Console.ReadLine();
+                            calif1[n1] = Convert.ToDouble(dato1);
+                        }
+                        for (n1 = 0; n1 < 3; n1++)
+                        {
+                            sumatoria1 += calif1[n1];
+                        }
+                        promedio1 = sumatoria1 / 3;
+                        for (n1 = 0; n1 < 3; n1++)
+                        {
+                            Console.WriteLine("El promedio  es {1} ", calif1[n1], promedio1);
+
+                        }
+                        notafinal = promedio1 * 07 + notaLab *03;
+                        Console.WriteLine(notafinal);
+                        Console.WriteLine();
                         break;
                     case 10:
                         Console.WriteLine("Has elegido la opción 3");
