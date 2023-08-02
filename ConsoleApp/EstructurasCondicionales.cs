@@ -136,28 +136,29 @@ namespace ConsoleApp
                                 case 2:
                                     int a1 = 0;
                                     int b2 = 0;
+                                    int c3 = 0;
                                     string dato5 = "";
                                     string dato6 = "";
                                     string dato7 = "";
 
                                     Console.WriteLine("ingrese el primer numero:");
-                                    dato3 = Console.ReadLine();
-                                    a = Convert.ToInt32(dato3);
+                                    dato5 = Console.ReadLine();
+                                    a1 = Convert.ToInt32(dato5);
 
                                     Console.WriteLine("ingrese el segundo numero:");
-                                    dato4 = Console.ReadLine();
-                                    b = Convert.ToInt32(dato4);
+                                    dato6 = Console.ReadLine();
+                                    b2 = Convert.ToInt32(dato6);
 
                                     Console.WriteLine("ingrese el tercer numero:");
-                                    dato4 = Console.ReadLine();
-                                    b = Convert.ToInt32(dato4);
-                                    if (a > b)
+                                    dato7 = Console.ReadLine();
+                                    c3 = Convert.ToInt32(dato7);
+                                    if (a1 > b2)
                                     {
-                                        Console.WriteLine(" " + b + " " + a);
+                                        Console.WriteLine(" " + b2 + " " + a1);
                                     }
                                     else
                                     {
-                                        Console.WriteLine(" " + a + " " + b);
+                                        Console.WriteLine(" " + a1 + " " + b2);
                                     }
                                     Console.WriteLine();
                                     Console.WriteLine();
