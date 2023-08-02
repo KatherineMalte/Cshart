@@ -6,25 +6,27 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    internal class EstructurasCondicionales
+    internal class Ciclos
     {
-        public void condicion()
+        public void simples()
         {
             bool salir = false;
             while (!salir)
             {
-                Console.WriteLine("1. Determinar par");
-                Console.WriteLine("2. Años bisiestos");
-                Console.WriteLine("3. División");
-                Console.WriteLine("4. Palabra más larga");
-                Console.WriteLine("5. Ordenamiento");
-                Console.WriteLine("6. Letra o número");
-                Console.WriteLine("7. Calculadora");
-                Console.WriteLine("8. Edad");
-                Console.WriteLine("9. Set de tenis");
-                Console.WriteLine("10. Triángulos");
-                Console.WriteLine("11. Índice de masa corporal");
-                Console.WriteLine("11. Salir");
+                Console.WriteLine("1.  Múltiplos");
+                Console.WriteLine("2.  Potencias de dos");
+                Console.WriteLine("3.  Suma entre números");
+                Console.WriteLine("4.  Tabla de multiplicar");
+                Console.WriteLine("5.  Divisores");
+                Console.WriteLine("6.  Tiempo de viaje");
+                Console.WriteLine("7.  Dibujos de asteriscos");
+                Console.WriteLine("8.  π");
+                Console.WriteLine("9.  Suma de fracciones");
+                Console.WriteLine("10. e");
+                Console.WriteLine("11. Secuencia de Collatz");
+                Console.WriteLine("12. Salir");
+                Console.WriteLine("Elige una de las opciones");
+
                 int opcion = Convert.ToInt32(Console.ReadLine());
 
                 switch (opcion)
@@ -70,8 +72,9 @@ namespace ConsoleApp
                         Console.WriteLine("Elige una opcion entre 1 y 11");
                         break;
                 }
-
             }
+
+
         }
     }
 }

@@ -6,25 +6,24 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    internal class EstructurasCondicionales
+    internal class PatronesComunes
     {
-        public void condicion()
+        public void comun()
         {
             bool salir = false;
             while (!salir)
             {
-                Console.WriteLine("1. Determinar par");
-                Console.WriteLine("2. Años bisiestos");
-                Console.WriteLine("3. División");
-                Console.WriteLine("4. Palabra más larga");
-                Console.WriteLine("5. Ordenamiento");
-                Console.WriteLine("6. Letra o número");
-                Console.WriteLine("7. Calculadora");
-                Console.WriteLine("8. Edad");
-                Console.WriteLine("9. Set de tenis");
-                Console.WriteLine("10. Triángulos");
-                Console.WriteLine("11. Índice de masa corporal");
-                Console.WriteLine("11. Salir");
+                Console.WriteLine("1.  No múltiplos");
+                Console.WriteLine("2.  Suma de naturales");
+                Console.WriteLine("3.  Número mayor");
+                Console.WriteLine("4.  Productos especiales");
+                Console.WriteLine("5.  Contar combinaciones de dados");
+                Console.WriteLine("6.  Histograma");
+                Console.WriteLine("7.  Más corta y más larga");
+                Console.WriteLine("8.  Piezas de dominó");
+                Console.WriteLine("9.  Lanzar dados");
+                Console.WriteLine("10. salir");
+                Console.WriteLine("Elige una de las opciones");
                 int opcion = Convert.ToInt32(Console.ReadLine());
 
                 switch (opcion)
@@ -56,21 +55,7 @@ namespace ConsoleApp
                     case 9:
                         Console.WriteLine();
                         break;
-                    case 10:
-                        Console.WriteLine();
-                        break;
-                    case 11:
-                        Console.WriteLine();
-                        break;
-                    case 12:
-                        Console.WriteLine("Has elegido salir de la aplicación");
-                        salir = true;
-                        break;
-                    default:
-                        Console.WriteLine("Elige una opcion entre 1 y 11");
-                        break;
                 }
-
             }
         }
     }
