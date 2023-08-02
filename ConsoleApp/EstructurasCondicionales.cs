@@ -100,13 +100,13 @@ namespace ConsoleApp
                         Console.WriteLine();
                         break;
                     case 5:
-                        
+                
                         while (!volver)
                         {
                             Console.WriteLine("Este es un programa que ordena números de menor a mayor ¿con cuántos numeros desea ordenar?");
-                            Console.WriteLine("1. tres números");
-                            Console.WriteLine("2. dos números");
-                            Console.WriteLine("3. tres números");
+                            Console.WriteLine("1. dos números");
+                            Console.WriteLine("2. tres números");
+                            Console.WriteLine("3. cuatro números");
                             Console.WriteLine("4. volver al menú anteriror");
                             int opcion1 = Convert.ToInt32(Console.ReadLine());
                             switch (opcion1) {
@@ -152,18 +152,94 @@ namespace ConsoleApp
                                     Console.WriteLine("ingrese el tercer numero:");
                                     dato7 = Console.ReadLine();
                                     c3 = Convert.ToInt32(dato7);
-                                    if (a1 > b2)
+
+                                    if (a1 > b2 && a1 > c3)
                                     {
-                                        Console.WriteLine(" " + b2 + " " + a1);
+                                        if(b2 > c3) {
+                                            Console.WriteLine(" " + c3 + " " + b2 + " " + a1);
+                                        }else { Console.WriteLine(" " + b2 + " " + c3 + " " + a1); }
                                     }
-                                    else
+                                    if (b2  > a1 && b2 > c3)
                                     {
-                                        Console.WriteLine(" " + a1 + " " + b2);
+                                        if (c3 > a1) { 
+                                        Console.WriteLine(" " + a1 + " " + c3+" " + b2);
                                     }
-                                    Console.WriteLine();
+                                    else { Console.WriteLine(" " + c3 + " " + a1 + " " + b2); }
+                                        
+
+                                    }
+                                    if (c3 > b2 && c3 >a1 )
+                                    {
+                                        if (b2 > a1) { 
+                                            Console.WriteLine(" " + a1 + " " + b2 + " " + c3);
+                                    }
+                                    else { Console.WriteLine(" " + b2 + " " + a1 + " " + c3); }
+                                    }
                                     Console.WriteLine();
                                     break;
                                 case 3:
+                                    int a2 = 0;
+                                    int b3 = 0;
+                                    int c4 = 0;
+                                    int d5 = 0;
+                                    string dato8 = "";
+                                    string dato9 = "";
+                                    string dato10 = "";
+                                    string dato11 = "";
+
+                                    Console.WriteLine("ingrese el primer numero:");
+                                    dato8 = Console.ReadLine();
+                                    a2 = Convert.ToInt32(dato8);
+
+                                    Console.WriteLine("ingrese el segundo numero:");
+                                    dato9 = Console.ReadLine();
+                                    b3 = Convert.ToInt32(dato9);
+
+                                    Console.WriteLine("ingrese el tercer numero:");
+                                    dato10 = Console.ReadLine();
+                                    c4 = Convert.ToInt32(dato10);
+
+                                    Console.WriteLine("ingrese el cuarto numero:");
+                                    dato11 = Console.ReadLine();
+                                    d5 = Convert.ToInt32(dato11);
+                
+                
+
+                                    if (a2 > b3 && a2 > c4 && a2 > d5)
+                                    {
+                                        if (b3 > c4 && b3 > a2 && b3>d5)
+                                        {
+                                           if(c4 > d5)
+                                            {
+                                            Console.WriteLine(" " + d5 + " " + c4 + " " + b3 + " " + a2);
+                                            }  
+                                        }
+                                        else { Console.WriteLine(" " + c4 + " " + d5 + " " + b3 + " " + a2); }
+                                     
+                                    }
+                                    
+                                 
+                                        if (b3 > a2 && b3 > c4 && b3 > d5)
+                                    {
+                                        if (c4 > a2)
+                                        {
+                                            Console.WriteLine(" " + a2 + " " + c4 + " " + b3);
+                                        }
+                                        else { Console.WriteLine(" " + c4 + " " + a2 + " " + b3); }
+
+
+                                    }
+                                    if (c4 > b3 && c4 > a2 && c4> d5 )
+                                    {
+                                        if (b3 > a2)
+                                        {
+                                            Console.WriteLine(" " + a2 + " " + b3 + " " + c4);
+                                        }
+                                        else { Console.WriteLine(" " + b3 + " " + a2 + " " + c4); }
+                                    }
+                                   
+
+                
                                     Console.WriteLine();
                                     break;
                                 case 4:
@@ -173,9 +249,9 @@ namespace ConsoleApp
                                 default:
                                     Console.WriteLine("Elige una opcion entre 1 y 11");
                                     break;
-                            }        }
-
-                Console.WriteLine();
+                            }
+                        }
+                        Console.WriteLine();
                         break;
                     case 6:
                         Console.WriteLine();
