@@ -25,7 +25,7 @@ namespace ConsoleApp
                 Console.WriteLine("9. Set de tenis");
                 Console.WriteLine("10. Triángulos");
                 Console.WriteLine("11. Índice de masa corporal");
-                Console.WriteLine("11. Salir");
+                Console.WriteLine("12. Salir");
                 int opcion = Convert.ToInt32(Console.ReadLine());
 
                 switch (opcion)
@@ -100,7 +100,7 @@ namespace ConsoleApp
                         Console.WriteLine();
                         break;
                     case 5:
-                
+
                         while (!volver)
                         {
                             Console.WriteLine("Este es un programa que ordena números de menor a mayor ¿con cuántos numeros desea ordenar?");
@@ -155,25 +155,25 @@ namespace ConsoleApp
 
                                     if (a1 > b2 && a1 > c3)
                                     {
-                                        if(b2 > c3) {
+                                        if (b2 > c3) {
                                             Console.WriteLine(" " + c3 + " " + b2 + " " + a1);
-                                        }else { Console.WriteLine(" " + b2 + " " + c3 + " " + a1); }
+                                        } else { Console.WriteLine(" " + b2 + " " + c3 + " " + a1); }
                                     }
-                                    if (b2  > a1 && b2 > c3)
+                                    if (b2 > a1 && b2 > c3)
                                     {
-                                        if (c3 > a1) { 
-                                        Console.WriteLine(" " + a1 + " " + c3+" " + b2);
-                                    }
-                                    else { Console.WriteLine(" " + c3 + " " + a1 + " " + b2); }
-                                        
+                                        if (c3 > a1) {
+                                            Console.WriteLine(" " + a1 + " " + c3 + " " + b2);
+                                        }
+                                        else { Console.WriteLine(" " + c3 + " " + a1 + " " + b2); }
+
 
                                     }
-                                    if (c3 > b2 && c3 >a1 )
+                                    if (c3 > b2 && c3 > a1)
                                     {
-                                        if (b2 > a1) { 
+                                        if (b2 > a1) {
                                             Console.WriteLine(" " + a1 + " " + b2 + " " + c3);
-                                    }
-                                    else { Console.WriteLine(" " + b2 + " " + a1 + " " + c3); }
+                                        }
+                                        else { Console.WriteLine(" " + b2 + " " + a1 + " " + c3); }
                                     }
                                     Console.WriteLine();
                                     break;
@@ -202,44 +202,59 @@ namespace ConsoleApp
                                     Console.WriteLine("ingrese el cuarto numero:");
                                     dato11 = Console.ReadLine();
                                     d5 = Convert.ToInt32(dato11);
-                
-                
+
+
 
                                     if (a2 > b3 && a2 > c4 && a2 > d5)
                                     {
-                                        if (b3 > c4 && b3 > a2 && b3>d5)
+                                        if (b3 > c4 && b3 > a2 && b3 > d5)
                                         {
-                                           if(c4 > d5)
+                                            if (c4 > d5)
                                             {
-                                            Console.WriteLine(" " + d5 + " " + c4 + " " + b3 + " " + a2);
-                                            }  
+                                                Console.WriteLine(" " + d5 + " " + c4 + " " + b3 + " " + a2);
+                                            }
                                         }
+                                        // Console.WriteLine(" " + d5 + " " + c4 + " " + b3 + " " + a2);
                                         else { Console.WriteLine(" " + c4 + " " + d5 + " " + b3 + " " + a2); }
-                                     
+
                                     }
-                                    
-                                 
-                                        if (b3 > a2 && b3 > c4 && b3 > d5)
+                                    //6107
+
+                                    if (b3 > a2 && b3 > c4 && b3 > d5)
                                     {
-                                        if (c4 > a2)
+                                        if (a2 > c4 && a2 > d5)
                                         {
-                                            Console.WriteLine(" " + a2 + " " + c4 + " " + b3);
+                                            if (c4 > d5) {
+                                                Console.WriteLine(" " + d5 + " " + c4 + " " + a2 + " " + b3);
+                                            }
+
                                         }
-                                        else { Console.WriteLine(" " + c4 + " " + a2 + " " + b3); }
+                                        else { Console.WriteLine(" " + c4 + " " + d5 + " " + a2 + " " + b3); }
 
 
                                     }
-                                    if (c4 > b3 && c4 > a2 && c4> d5 )
+                                    if (c4 > b3 && c4 > a2 && c4 > d5)
                                     {
-                                        if (b3 > a2)
+                                        if (b3 > a2 && b3 > d5)
                                         {
-                                            Console.WriteLine(" " + a2 + " " + b3 + " " + c4);
+                                            if (a2 > d5) { }
+                                            Console.WriteLine(" " + d5 + " " + a2 + " " + b3 + " " + c4);
                                         }
-                                        else { Console.WriteLine(" " + b3 + " " + a2 + " " + c4); }
+                                        else { Console.WriteLine(" " + a2 + " " + d5 + " " + b3 + " " + c4); }
                                     }
-                                   
 
-                
+                                    if (d5 > b3 && d5 > a2 && d5 > c4)
+                                    {
+                                        if (b3 > a2 && b3 > d5)
+                                        {
+                                            if (a2 > d5) {
+                                                Console.WriteLine(" " + d5 + " " + a2 + " " + b3 + " " + c4);
+                                            }
+                                        }
+                                        else { Console.WriteLine(" " + a2 + " " + d5 + " " + b3 + " " + c4); }
+                                    }
+
+
                                     Console.WriteLine();
                                     break;
                                 case 4:
@@ -257,18 +272,161 @@ namespace ConsoleApp
                         Console.WriteLine();
                         break;
                     case 7:
+                        int i1 = 2, i2 = 3;
+                        float divisionI;
+                        string ope = "";
+                        Console.WriteLine("Operando:");
+                        i1 = Convert.ToInt32(Console.ReadLine()); Console.WriteLine("Operador:");
+                        ope = Console.ReadLine();
+                        Console.WriteLine("Operando:");
+                        i2 = Convert.ToInt32(Console.ReadLine());
+
+
+
+                        if (ope == "*")
+                        {
+                            divisionI = (i1 * i2);
+
+                            Console.WriteLine("{0} {1} {2} = {3}", i1, ope, 12, divisionI);
+
+                        }
+                        else if (ope == "/")
+                        {
+                            divisionI = (i1 / i2);
+
+                            Console.WriteLine("{0} {1} {2} = {3}", i1, ope, 12, divisionI);
+                        }
+                        else if (ope == "+")
+                        {
+                            divisionI = (i1 + i2);
+
+                            Console.WriteLine("{0} {1} {2} = {3}", i1, ope, 12, divisionI);
+                        }
+                        else if (ope == "-")
+                        {
+                            divisionI = (i1 - i2);
+
+                            Console.WriteLine("{0} {1} {2} = {3}", i1, ope, 12, divisionI);
+                        }
+                        else if (ope == "**")
+                        {
+                            // divisionI = (i1 ** i2);
+                            //-1 ** 4 = 1
+
+                            //Console.WriteLine("El resultado es {0}", divisionI);
+                        }
                         Console.WriteLine();
                         break;
                     case 8:
+
                         Console.WriteLine();
                         break;
                     case 9:
+                        int m, n;
+                        Console.WriteLine("Juegos ganados por A: ");
+                        m = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Juegos ganados por B: ");
+                        n = Convert.ToInt32(Console.ReadLine());
+
+                        if ((m == 6 && n < 5) || (m == 7 && n >= 5 && n < 7))
+                        {
+                            Console.WriteLine("Gano A");
+                        }
+                        else if ((n == 6 && m < 5) || (n == 7 && m >= 5 && m < 7))
+                        {
+                            Console.WriteLine("Gano B");
+                        }
+                        else if (m < 7 && n < 7) { Console.WriteLine("Aun no termina"); }
+                        else
+                        {
+                            Console.WriteLine("Invalido");
+                        }
                         Console.WriteLine();
                         break;
                     case 10:
+                        float aa1, b1, c1;
+                        float temp;
+                        Console.WriteLine("a: ");
+                        aa1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("b: ");
+                        b1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("c: ");
+                        c1 = Convert.ToInt32(Console.ReadLine());
+
+                        if (aa1 + b1 > c1 && aa1 + c1 > b1 && b1 + c1 > aa1)
+                        {
+                            if (aa1 == b1 && b1 == c1)
+                                Console.WriteLine("Triángulo equilátero");
+                        }
+                        else if (aa1 == b1 || aa1 == c1 || b1 == c1)
+                        {
+                            Console.WriteLine("Triángulo isósceles");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Triángulo escaleno");
+                        }
+
+                        if (aa1 >= b1 && aa1 >= c1)
+                        {
+                            temp = c1;
+                            c1 = aa1;
+                            aa1 = temp;
+                        }
+                        else if (b1 >= aa1 && b1 >= c1)
+                        {
+                            temp = c1;
+                            c1 = b1;
+                            b1 = temp;
+                        }
+
+                        if (Math.Pow(aa1, 2) + Math.Pow(b1, 2) == Math.Pow(c1, 2))
+                        {
+                            Console.WriteLine("Además es rectángulo");
+                        }
+                        else if (Math.Pow(aa1, 2) + Math.Pow(b1, 2) < Math.Pow(c1, 2))
+                        {
+                            Console.WriteLine("Además es obtusángulo");
+                        }
+
+                        else
+                        {
+                            Console.WriteLine("Además es acutángulo");
+                            Console.WriteLine("No se puede formar un triangulo con", aa1, b1, c1);
+                        }
                         Console.WriteLine();
                         break;
                     case 11:
+                        double estatura, peso, edad, imc;
+                        Console.WriteLine("Calculo de condicion de riesgo de enfermedades coronarias ");
+                        Console.WriteLine("ingrese su edad "); edad = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("ingrese su peso "); peso = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("ingrese su estatura ");estatura = Convert.ToInt32(Console.ReadLine());
+                        
+                       
+                       
+
+                        imc = peso / Math.Pow(estatura,2);
+                        if (edad > 0 && peso > 0 && estatura > 0)
+                        {
+                            if (edad<45) {
+                            if(imc <22.0)
+                                {
+                                    Console.WriteLine("Su condicion de riesgo es BAJO ");
+                                }
+                                else { Console.WriteLine("Su condicion de riesgo es MEDIO "); }
+                            }
+                            else { if (imc < 22.0)
+                                {
+                                    Console.WriteLine("Su condicion de riesgo es MEDIO ");
+
+                                }
+                                else {
+                                    Console.WriteLine("Su condicion de riesgo es ALTO ");
+                                } }
+                            
+                        }
                         Console.WriteLine();
                         break;
                     case 12:
