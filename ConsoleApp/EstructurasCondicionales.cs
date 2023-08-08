@@ -8,6 +8,7 @@ namespace ConsoleApp
 {
     internal class EstructurasCondicionales
     {
+       // #region seccion1;
         public void condicion()
         {
             bool volver = false;
